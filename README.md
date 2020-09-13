@@ -20,5 +20,5 @@
 * [] ErrorBoundry
 * [] Add images
 * [] Loader
-* [] Deploy To Github As live version on9
+* [] Deploy To Github As live version on9.
 
