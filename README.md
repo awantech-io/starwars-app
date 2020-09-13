@@ -1,19 +1,20 @@
 # StarWars App - Build with React & Swapi JSon
 
-* [] Prepare file structures
-  * [] Delete all files in src folder except App.js & index.js
-  * [] Clean all code in App.js & index.js
-  * [] Create components folder
-  * [] Create containers folder
-* [] Create Card Component
-  * [] Create Dummy content
-* [] Create CardList Component
-  * [] Create Dummy content 
-* [] Fetch json data from
-  * [] Show data in app.js
-* [] Create presention UI
-  * [] Show data in Card component
-  * [] Show data in CardList component
+* [x] Prepare file structures
+  * [x] Delete all files in src folder except App.js & index.js
+  * [x] Create components folder
+  * [x] Create containers folder
+  * [x] Move App.js into containers folder
+  * [x] Clean all code in App.js & index.js
+* [x] Create Card Component
+  * [x] Create Dummy content
+* [x] Create CardList Component  
+  * [x] Create Dummy content 
+* [x] Fetch json data from https://swapi.dev/api/people/
+  * [x] Show data in app.js
+* [x] Create presention UI
+  * [x] Show data in Card component
+  * [x] Show data in CardList component
 * [] Search
 * [] UI Design Style
 * [] Scroll
