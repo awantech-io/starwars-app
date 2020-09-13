@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
-import './App.css';
 import CardList from '../components/CardList';
-
+import SearchBox from '../components/SearchBox';
+import './App.css';
 
 class App extends Component {
 
   constructor(){
     super();
     this.state = {
-      peoples:[]
+      peoples:[],
+      searchfield:''
     }
   }
 
@@ -21,15 +22,32 @@ class App extends Component {
     
   }
 
+  // put search text in search form field
+  onSearchChange = (event) => {
+    // set search field value
+    this.setState({ searchfield: event.target.value})
+}
+
   render(){
 
     // destructure
-    const { peoples } = this.state;
+    const { peoples, searchfield } = this.state;
+
+    // return search result array
+    const filteredPeoples = peoples.filter(people =>{
+        return people.name.toLowerCase()
+        .includes(searchfield.toLocaleLowerCase());
+        //return people.name.toLowerCase().includes(searchfield.toLowerCase());
+        //return people.name.includes(searchfield);
+    })  
   
-    return (
+    return !peoples.length ? 
+    <h1>Loading</h1>:
+    (
       <div>
         <h1>STARWARS APP</h1>
-        <CardList peoples={peoples}/>
+        <SearchBox searchChange={this.onSearchChange}/>
+        <CardList peoples={filteredPeoples}/>
       </div>
     );
   }
