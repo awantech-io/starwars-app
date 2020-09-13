@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
+import Scroll from '../components/Scroll'
 import './App.css';
 
 class App extends Component {
@@ -37,17 +38,17 @@ class App extends Component {
     const filteredPeoples = peoples.filter(people =>{
         return people.name.toLowerCase()
         .includes(searchfield.toLocaleLowerCase());
-        //return people.name.toLowerCase().includes(searchfield.toLowerCase());
-        //return people.name.includes(searchfield);
     })  
   
     return !peoples.length ? 
     <h1>Loading</h1>:
     (
-      <div>
-        <h1>STARWARS APP</h1>
+      <div className='tc'>
+        <img alt='starwars-logo' src='https://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG34.png' width="250" height="250"/>
         <SearchBox searchChange={this.onSearchChange}/>
+        <Scroll>
         <CardList peoples={filteredPeoples}/>
+        </Scroll>
       </div>
     );
   }

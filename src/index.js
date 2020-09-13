@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import './index.css';
-import App from './container/App'
+import './index.css';
+import App from './container/App';
+import 'tachyons';
 
 ReactDOM.render(
   <React.StrictMode>

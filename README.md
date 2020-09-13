@@ -15,9 +15,10 @@
 * [x] Create presention UI
   * [x] Show data in Card component
   * [x] Show data in CardList component
-* [] Search
-* [] UI Design Style
-* [] Scroll
+* [x] Search
+* [x] Install tachyons for styling
+* [x] UI Design Style
+* [x] Scroll
 * [] ErrorBoundry
 * [] Add images
 * [] Loader
